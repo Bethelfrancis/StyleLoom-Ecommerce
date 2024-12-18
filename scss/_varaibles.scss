@@ -1,0 +1,48 @@
+$black: #000;
+$white: #fff;
+$brown: #f8d197;
+$browns: #b89055;
+$opacity: #252525;
+$border: #3a3838;
+$tab: 600px;
+$big-tab: 960px;
+$mobile: 1185px;
+
+$font-size: (
+    'para': 15.6px,
+    'regular': 17px,
+    'medium': 19px,
+    'large': 30px,
+);
+
+$font-weight: (
+    'small': 200,
+    'regular': 300,
+    'medium': 500,
+    'large': 700,
+);
+
+@mixin flexCenter($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+};
+
+@mixin tab {
+    @media (max-width: $tab) {
+        @content 
+    };
+};
+
+@mixin big-tab {
+    @media (max-width: $big-tab) {
+        @content;
+    };
+};
+
+@mixin mobile {
+    @media (max-width: $mobile) {
+        @content;
+    };
+};

@@ -1,0 +1,65 @@
+@import './varaibles';
+@import './home';
+@import './products';
+@import './header';
+@import './testimony';
+@import './questions';
+@import './wardrobe';
+@import './footer';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $black;
+    color: $white;
+}
+
+.no-scroll {overflow: hidden;}
+
+
+.container {
+    font-size: map-get($font-size, regular);
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+h1 {
+    font-size: map-get($font-size, large);
+    font-weight: map-get($font-weight, medium);
+    padding: 20px 0;
+    word-wrap: break-word;
+}
+
+h2 {
+    font-weight: map-get($font-weight, medium);
+    padding: 4% 0 6% 0;
+}
+
+h3 {
+    font-size: map-get($font-size, medium);
+    font-weight: map-get($font-weight, regular);
+    padding: 5% 0;
+}
+
+h4 {
+    font-size: map-get($font-size, para);
+    font-weight: map-get($font-weight, small);
+}
+
+p {
+    font-size: map-get($font-size, para);
+    line-height: 26px;
+    width: 90%;
+    word-wrap: break-word;
+    opacity: 0.5;
+}
+
+@include big-tab {
+    p {
+        font-size: map-get($font-size, regular)
+    }
+}
